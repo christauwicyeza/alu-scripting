@@ -1,2 +1,2 @@
 #!/usr/bin/env ruby
-aMatch = /school/
+aMatch = /School/
