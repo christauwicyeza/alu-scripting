@@ -1,3 +1,3 @@
 #!/usr/bin/env ruby
-aMatch = /School+/.match
+aMatch = /School/.match
 puts(aMatch[0]) 
