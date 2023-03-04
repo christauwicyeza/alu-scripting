@@ -2,9 +2,9 @@
 """
 get hot articles function recursively
 """
-
-import requests
 import json
+import requests
+import sys
 
 
 def recurse(subreddit, hot_list=[], after=None):
