@@ -5,18 +5,16 @@
 import json
 import requests
 
+import requests
+
 def number_of_subscribers(subreddit):
     url = f"https://www.reddit.com/r/{subreddit}/about.json"
     headers = {'User-Agent': 'Mozilla/5.0'}
-    
-    try:
-        response = requests.get(url, headers=headers, allow_redirects=False)
-        response.raise_for_status()  # raise an exception if status code is not 200
-        data = response.json()['data']
-        return data['subscribers']
-    except (requests.exceptions.HTTPError, json.JSONDecodeError):
+    response = requests.get(url, headers=headers, allow_redirects=False)
+    if response.status_code == 200:
+        return response.json()['data']['subscribers']
+    else:
         return 0
-
-
+ 
 
 
