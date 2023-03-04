@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """
 get top 10 hot posts function
 """
@@ -6,6 +7,7 @@ get top 10 hot posts function
 import json
 import requests
 import sys
+
 
 def top_ten(subreddit):
     """Prints the titles of the first 10 hot posts for a subreddit."""
